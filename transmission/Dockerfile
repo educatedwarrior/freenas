@@ -58,4 +58,4 @@ RUN \
  rm -rf /var/cache/apk/* /tmp/*
 
 # copy local files
-COPY root/ /
+#COPY root/ /
