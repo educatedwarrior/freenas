@@ -50,13 +50,14 @@ LABEL org.freenas.interactive="false" \
 
 # install packages and NzbToMedia Requirements
 RUN \
-  apk add --no-cache \
-    git \
-    python && \
+  #apt-get update && \
+  #apt-get install -yq \ 
+  #  git \
+  #  python && \
 
  git -C /app clone -q  https://github.com/clinton-hall/nzbToMedia.git && \
 
- rm -rf /var/cache/apk/* /tmp/*
+ rm -rf /var/cache/apt/* /tmp/*
 
 # copy local files
-COPY root/ /
+#COPY root/ /
