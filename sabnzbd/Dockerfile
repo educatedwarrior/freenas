@@ -56,7 +56,7 @@ RUN \
     python && \
 
  git -C /app clone -q  https://github.com/clinton-hall/nzbToMedia.git && \
-
+ chmod -R 777 /app/nzbToMedia/ && \
  rm -rf /var/cache/apt/* /tmp/*
 
 # copy local files
