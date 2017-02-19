@@ -18,22 +18,18 @@ LABEL org.freenas.interactive="false" \
                \"descr\": \"SSL certs\"			\
           },								\
           {								\
-              \"name\": \"/config/Downloads/incomplete\",			\
+              \"name\": \"/downloads\",			\
               \"descr\": \"incomplete downloads volume\"		\
           },								\
           {								\
-              \"name\": \"/config/Downloads/complete\",					\
-              \"descr\": \"downloads volume\"				\
-           },								\
-          {								\
-              \"name\": \"/config/Downloads/watched\",					\
+              \"name\": \"/watch\",					\
               \"descr\": \"watched folder\"				\
           }								\
       ]" \
      org.freenas.settings="[ 						                        \
           {								                                    \
               \"env\": \"TZ\",					                              \
-              \"descr\": \"Timezone information, eg Europe/London\",				\
+              \"descr\": \"Timezone information, eg America/New_York\",				\
               \"optional\": true					                              \
           },								                              \
           {								                                    \
