@@ -50,10 +50,10 @@ LABEL org.freenas.interactive="false" \
 
 # install packages and NzbToMedia Requirements
 RUN \
-  #apt-get update && \
-  #apt-get install -yq \ 
-  #  git \
-  #  python && \
+  apt-get update && \
+  apt-get install -yq \ 
+    git \
+    python && \
 
  git -C /app clone -q  https://github.com/clinton-hall/nzbToMedia.git && \
 
