@@ -1,4 +1,4 @@
-FROM hexparrot/mineos:node-jessie 
+FROM hexparrot/mineos:latest 
 LABEL org.freenas.interactive="false" \
       org.freenas.version="1" \
       org.freenas.upgradeable="true" \
@@ -21,7 +21,7 @@ LABEL org.freenas.interactive="false" \
               \"optional\": true					                              \
           },								                              \
           {								                                    \
-              \"env\": \"PUID\",					                              \
+              \"env\": \"USER_ID\",					                              \
               \"descr\": \"User ID \",				\
               \"optional\": true					                              \
           },								                              \
