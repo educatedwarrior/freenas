@@ -1,4 +1,4 @@
-FROM hexparrot/mineos:latest 
+FROM hexparrot/mineos:node-vivid
 LABEL org.freenas.interactive="false" \
       org.freenas.version="1" \
       org.freenas.upgradeable="true" \
