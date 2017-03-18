@@ -75,8 +75,9 @@ RUN cd /usr/games/minecraft \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #initialize minecraft
-RUN cp init.sh /init.sh
-CMD ["sh","init.sh"]
+RUN cp init.sh /init.sh \
+  && /bin/sh /init.sh
+#CMD ["sh","init.sh"]
 
 #configure and run supervisor
 RUN cp /usr/games/minecraft/init/supervisor_conf /etc/supervisor/conf.d/mineos.conf
