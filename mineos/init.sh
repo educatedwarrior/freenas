@@ -5,7 +5,7 @@
 if [ -z "$USER_PASSWORD" ]; then
   #echo >&2 'You need to specify USER_PASSWORD'
   #exit 1
-  export USER_PASSWORD="changeme"
+  export USER_PASSWORD="mcserver"
 fi
 
 if [ "$USER_NAME" ]; then
@@ -15,8 +15,8 @@ if [ "$USER_NAME" ]; then
     exit 1
   fi
 else
-  echo >&2 'USER_NAME not provided; defaulting to "mc"'
-  USER_NAME=mc
+  echo >&2 'USER_NAME not provided; defaulting to "mcserver"'
+  USER_NAME=mcserver
 fi
 
 if [ "$USER_UID" ]; then
