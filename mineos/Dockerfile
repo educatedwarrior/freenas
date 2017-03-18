@@ -51,6 +51,7 @@ RUN apt-get update && apt-get install -y \
   rlwrap \
   vim \
   net-tools \
+  openssh-server \ 
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #install node from nodesource
@@ -75,8 +76,9 @@ RUN cd /usr/games/minecraft \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #initialize minecraft
-RUN cp init.sh /init.sh \
-  && /bin/sh /init.sh
+COPY init.sh /init.sh
+#RUN cp init.sh /init.sh \
+RUN /init.sh
 #CMD ["sh","init.sh"]
 
 #configure and run supervisor
