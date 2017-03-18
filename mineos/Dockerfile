@@ -49,6 +49,8 @@ RUN apt-get update && apt-get install -y \
   git \
   curl \
   rlwrap \
+  vim \
+  net-tools \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 #install node from nodesource
@@ -71,6 +73,10 @@ RUN cd /usr/games/minecraft \
   && apt-get autoremove -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+#initialize minecraft
+RUN cp init.sh /init.sh
+CMD ["sh","init.sh"]
 
 #configure and run supervisor
 RUN cp /usr/games/minecraft/init/supervisor_conf /etc/supervisor/conf.d/mineos.conf
