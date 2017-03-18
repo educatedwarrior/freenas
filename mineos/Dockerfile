@@ -78,6 +78,7 @@ RUN cd /usr/games/minecraft \
 #initialize minecraft
 COPY init.sh /init.sh
 #RUN cp init.sh /init.sh \
+RUN chmod +x /init.sh
 RUN /init.sh
 #CMD ["sh","init.sh"]
 
