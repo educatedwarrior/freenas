@@ -1,15 +1,15 @@
 FROM lsiobase/xenial 
 MAINTAINER Educated Warrior
 
-LABEL org.freenas.interactive="false" \
-      org.freenas.version="1" \
+LABEL org.freenas.interactive="true" \
+      org.freenas.version="1.01" \
       org.freenas.upgradeable="true" \
       org.freenas.expose-ports-at-host="true" \
       org.freenas.autostart="true" \
       org.freenas.web-ui-protocol="https" \
       org.freenas.web-ui-port="8443" \
       org.freenas.web-ui-path="" \
-      org.freenas.port-mappings="22:22/tcp,8443:8443/tcp,25565:25565/tcp" \
+      org.freenas.port-mappings="8443:8443/tcp,25565:25565/tcp" \
       org.freenas.volumes="[						\
           {								\
               \"name\": \"/var/games/minecraft\",					\
@@ -89,5 +89,5 @@ CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
 # COPY root/ /
 
 # ports and volumes
-EXPOSE 22 8443 25565-25570
+EXPOSE 8443 25565-25570
 VOLUME /var/games/minecraft  
