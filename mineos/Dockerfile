@@ -77,7 +77,7 @@ RUN cp /usr/games/minecraft/init/supervisor_conf /etc/supervisor/conf.d/mineos.c
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
 
 # add local files
-COPY root/ /
+# COPY root/ /
 
 # ports and volumes
 EXPOSE 22 8443 25565-25570
