@@ -66,6 +66,10 @@ RUN mkdir /usr/games/minecraft \
   && cp mineos.conf /etc/mineos.conf \
   && chmod +x webui.js mineos_console.js service.js
 
+#Add user, update password, create ssl certificate, enable root ssh
+COPY security_update.sh /tmp/security_update.sh
+RUN chmod +x /tmp/security_update.sh && /bin/bash /tmp/security_update.sh
+
 #build npm deps and clean up apt for image minimalization
 RUN cd /usr/games/minecraft \
   && apt-get update \
@@ -75,11 +79,6 @@ RUN cd /usr/games/minecraft \
   && apt-get autoremove -y \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-#initialize minecraft
-COPY init.sh /init.sh
-RUN chmod +x /init.sh
-RUN /init.sh
 
 #configure and run supervisor
 RUN cp /usr/games/minecraft/init/supervisor_conf /etc/supervisor/conf.d/mineos.conf
