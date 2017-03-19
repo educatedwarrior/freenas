@@ -69,6 +69,7 @@ RUN mkdir /usr/games/minecraft \
 #Add user, update password, create ssl certificate, enable root ssh
 COPY security_update.sh /tmp/security_update.sh
 RUN chmod +x /tmp/security_update.sh && /bin/bash /tmp/security_update.sh
+RUN service ssh restart
 
 #build npm deps and clean up apt for image minimalization
 RUN cd /usr/games/minecraft \
