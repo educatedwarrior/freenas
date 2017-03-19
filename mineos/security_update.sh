@@ -1,6 +1,6 @@
 
 #!/bin/bash
-#set -eo pipefail
+set -eo pipefail
 
 if [ -z "$USER_PASSWORD" ]; then
   #echo >&2 'You need to specify USER_PASSWORD'
@@ -42,4 +42,4 @@ if [ ! -f /etc/ssl/certs/mineos.crt ]; then
   sh /usr/games/minecraft/generate-sslcert.sh
 fi
 
-#exec "$@"
+exec "$@"
