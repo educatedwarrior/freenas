@@ -18,11 +18,6 @@ LABEL org.freenas.interactive="false" \
       ]" \
      org.freenas.settings="[ 						                        \
           {								                                    \
-              \"env\": \"TZ\",					                              \
-              \"descr\": \"Timezone information, eg America/New_York\",				\
-              \"optional\": true					                              \
-          },								                              \
-          {								                                    \
               \"env\": \"USER_ID\",					                              \
               \"descr\": \"User ID \",				\
               \"optional\": true					                              \
