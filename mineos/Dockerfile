@@ -65,6 +65,7 @@ RUN mkdir /usr/games/minecraft \
 COPY security_update.sh /tmp/security_update.sh
 RUN chmod +x /tmp/security_update.sh && /bin/bash /tmp/security_update.sh \
   && sed -i.bak 's/PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config \
+  && sed -i.bak 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config \
   && service ssh restart \
   && rm -rf /tmp/*
 
