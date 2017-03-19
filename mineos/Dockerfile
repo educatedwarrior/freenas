@@ -66,7 +66,7 @@ COPY security_update.sh /tmp/security_update.sh
 RUN chmod +x /tmp/security_update.sh && /bin/bash /tmp/security_update.sh \
   && sed -i.bak 's/PermitRootLogin no/PermitRootLogin yes/g' /etc/ssh/sshd_config \
   && sed -i.bak 's/PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config \
-  && service ssh restart \
+  && systemctl enable ssh.socket \
   && rm -rf /tmp/*
 
 #build npm deps and clean up apt for image minimalization
