@@ -1,7 +1,7 @@
 FROM lsiobase/xenial 
 MAINTAINER Educated Warrior
 
-LABEL org.freenas.interactive="false" \
+LABEL org.freenas.interactive="true" \
       org.freenas.version="1.01" \
       org.freenas.upgradeable="true" \
       org.freenas.expose-ports-at-host="true" \
