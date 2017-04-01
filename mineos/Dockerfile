@@ -2,7 +2,7 @@ FROM educatedwarrior/mineos-docker:mineos-wily
 MAINTAINER Educated Warrior
 
 LABEL org.freenas.interactive="true" \
-      org.freenas.version="1.01" \
+      org.freenas.version="1.02" \
       org.freenas.upgradeable="true" \
       org.freenas.expose-ports-at-host="true" \
       org.freenas.autostart="true" \
