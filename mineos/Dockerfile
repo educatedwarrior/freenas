@@ -1,4 +1,4 @@
-FROM educatedwarrior/mineos-docker:ubuntu-wily 
+FROM educatedwarrior/mineos-docker:mineos-wily 
 MAINTAINER Educated Warrior
 
 LABEL org.freenas.interactive="true" \
